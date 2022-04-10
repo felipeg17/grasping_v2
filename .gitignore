@@ -1,5 +1,6 @@
 *.pth
 *.jpg
 *.png
+*.txt
+*.tiff
 models/FAT_trained_Ml2R_bin_fine_tuned.pth
-content/

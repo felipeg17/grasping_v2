@@ -1,0 +1,5 @@
+train: content/datasets/cornell_v2/train/images
+val: content/datasets/cornell_v2//valid/images
+
+nc: 25
+names: ['Apple', 'Banana', 'Box', 'Camera', 'Can', 'Cap', 'Container', 'Cucumber', 'Cup', 'Frisby', 'Glasses', 'Hairbrush', 'Mouse', 'Pen', 'Plate', 'Potato', 'Remote', 'Scissors', 'Shoe', 'Tape', 'Toothbrush', 'Toothpaste', 'Torch', 'Umbrella', 'Util']
