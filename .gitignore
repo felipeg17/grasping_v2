@@ -3,5 +3,11 @@
 *.png
 *.txt
 *.tiff
+*.pt
 /content
 models/FAT_trained_Ml2R_bin_fine_tuned.pth
+/object_detection
+/object_detection.egg-info
+/models/retina_config
+/build
+setup.py

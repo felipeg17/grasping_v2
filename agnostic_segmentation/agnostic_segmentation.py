@@ -17,8 +17,6 @@ setup_logger()  # initialize the detectron2 logger and set its verbosity level t
 
 
 def segment_image(img, model_path, confidence = 0.7):
-    
-
     # --- detectron2 Config setup ---
     cfg = get_cfg()
     cfg.merge_from_file(model_zoo.get_config_file("COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml"))  # WAS 3x.y
@@ -29,8 +27,8 @@ def segment_image(img, model_path, confidence = 0.7):
     cfg.MODEL.ROI_MASK_HEAD.CLS_AGNOSTIC_MASK = True
     cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = confidence
     # device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    cfg.MODEL.DEVICE = 'cuda'
-    # cfg.MODEL.DEVICE = 'cpu'
+    # cfg.MODEL.DEVICE = 'cuda'
+    cfg.MODEL.DEVICE = 'cpu'
     predictor = DefaultPredictor(cfg)
 
     predictions = predictor(img)
